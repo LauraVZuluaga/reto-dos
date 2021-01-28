@@ -8,7 +8,7 @@
             <b-col cols="3">
                 <b-dropdown variant="outline-dark">
                     <template #button-content>
-                        Genero
+                        Gender
                         <font-awesome-icon icon="restroom" style="font-size: 100%" />
                     </template>
                     <b-dropdown-item @click="genreOption = 'F'">Femenino</b-dropdown-item>
@@ -18,7 +18,7 @@
             <b-col cols="3">
                 <b-dropdown variant="outline-dark">
                     <template #button-content>
-                        Estado
+                        State
                         <font-awesome-icon icon="info-circle" style="font-size: 100%" />
                     </template>
                     <b-dropdown-item v-for="(item, index) in getStatusOptions" :key="index" @click="statusOption = item">
@@ -29,7 +29,7 @@
             <b-col cols="3">
                 <b-dropdown variant="outline-dark" dropright>
                     <template #button-content>
-                        Ciudad
+                        City
                         <font-awesome-icon icon="city" style="font-size: 100%" />
                     </template>
                     <b-dropdown-item v-for="(item, index) in getCitiesOptions" :key="index" @click="cityOption = item">
