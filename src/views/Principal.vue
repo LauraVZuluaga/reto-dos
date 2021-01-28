@@ -20,17 +20,12 @@ export default {
         }
     },
     created () {
-        this.getInfo();
+    
     },
     methods: {
 
-        ...mapActions(['callMutationData']),
+        // ...mapActions(['callMutationData']),
 
-        async getInfo() {
-            let response = await axios.get('https://www.datos.gov.co/resource/gt2j-8ykr.json');
-            this.callMutationData(response.data);
-            console.log(this.getData);
-        }
     },
     computed: {
         ...mapGetters(['getData'])

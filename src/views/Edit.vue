@@ -45,7 +45,6 @@ export default {
     },
     computed: {
         ...mapGetters(['getData']),
-        ...mapState(['data'])
     },
 }
 </script>

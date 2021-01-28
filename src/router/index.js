@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Principal from '../views/Principal.vue'
 import Edit from '../views/Edit.vue'
+import Filter from '../views/Filter.vue'
+import Insert from '../views/Insert.vue'
 
 
 Vue.use(VueRouter)
@@ -16,6 +18,18 @@ const routes = [
     path: '/edit',
     name: 'Edit',
     component: Edit
+  },
+
+  {
+    path: '/filter',
+    name: 'Filter',
+    component: Filter
+  },
+
+  {
+    path: '/insert',
+    name: 'Insert',
+    component: Insert
   },
 
   // {

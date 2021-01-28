@@ -1,12 +1,41 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+
+import axios from 'axios'
+import {mapActions, mapGetters} from 'vuex'
+
+export default {
+  created () {
+    this.getInfo();
+  },
+  methods: {
+    async getInfo() {
+            let response = await axios.get('https://www.datos.gov.co/resource/gt2j-8ykr.json');
+            this.callMutationData(response.data);
+            this.callStatusOptions();
+            this.callCityOption();
+            this.callSetId();
+            this.callUbicationOption();
+            this.callRecuperationOption();
+            // console.log(this.getData);
+    },
+        ...mapActions(['callMutationData', 'callStatusOptions', 
+        'callCityOption', 'callSetId', 'callUbicationOption', 'callRecuperationOption']),
+
+    },
+    computed: {
+        ...mapGetters(['getData', 'getStatusOptions', 'getCitiesOptions'])
+    },
+
+}
+</script>
+
+
 
 <style lang="scss">
 #app {
@@ -30,3 +59,4 @@
   }
 }
 </style>
+
