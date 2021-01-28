@@ -12,6 +12,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+import VueCrontab from 'vue-crontab'
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
@@ -19,6 +20,8 @@ Vue.use(IconsPlugin)
 
 library.add(fas)
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+
+Vue.use(VueCrontab)
 
 Vue.config.productionTip = false
 

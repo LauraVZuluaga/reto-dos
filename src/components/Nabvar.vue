@@ -1,8 +1,8 @@
 <template>
   <div>
-  <b-navbar type="dark" variant="dark">
+  <b-navbar style="background-color: #9FC0C7; text-color:black">
     <b-navbar-nav>
-      <b-nav-item to="/">Principal</b-nav-item>
+      <b-nav-item class="colorText" to="/">Principal</b-nav-item>
       <b-nav-item to="/edit">Edit</b-nav-item>
       <b-nav-item to="/filter">Filter / Delete</b-nav-item>
       <b-nav-item to="/insert">Insert</b-nav-item>
@@ -17,6 +17,6 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
 
 </style>

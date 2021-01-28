@@ -12,8 +12,18 @@ import {mapActions, mapGetters} from 'vuex'
 export default {
   created () {
     this.getInfo();
+    let result = this.$crontab.addJob({
+      name: 'counter',
+      interval: {
+        seconds: '/600',
+      },
+      job: this.countUp
+    })
   },
   methods: {
+    countUp(){
+      this.getInfo();
+    }, 
     async getInfo() {
             let response = await axios.get('https://www.datos.gov.co/resource/gt2j-8ykr.json');
             this.callMutationData(response.data);
@@ -34,7 +44,6 @@ export default {
 
 }
 </script>
-
 
 
 <style lang="scss">

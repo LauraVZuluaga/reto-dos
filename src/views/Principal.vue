@@ -1,6 +1,11 @@
 <template>
   <div>
       <Navbar/>
+      <div class="imgSearch">
+          <h1>Welcome to the CovidApp</h1>
+          <img src="../assets/undraw_people_search_wctu.png" alt="Search Image" width="660px">
+           
+      </div>
   </div>
 </template>
 
@@ -33,6 +38,11 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss">
+.imgSearch{
+    align-items: center
+}
+.imgSearch h1{
+    margin-top: 10px
+}
 </style>

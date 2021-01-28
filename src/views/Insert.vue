@@ -5,14 +5,14 @@
         </div>
     <b-container class="mt-4">
         <b-row>
-            <h4>Agregar nuevo caso</h4>
+            <h4>Create a new case</h4>
             <hr>
         </b-row>
         <b-row class="mt-3">
             <b-col cols="2">
                 <b-dropdown variant="outline-dark">
                     <template #button-content>
-                        Genero
+                        Gender
                         <font-awesome-icon icon="restroom" style="font-size: 100%" />
                     </template>
                     <b-dropdown-item @click="genreOption = 'F'">Femenino</b-dropdown-item>
@@ -22,7 +22,7 @@
             <b-col cols="2">
                 <b-dropdown variant="outline-dark">
                     <template #button-content>
-                        Estado
+                        State
                         <font-awesome-icon icon="info-circle" style="font-size: 100%" />
                     </template>
                     <b-dropdown-item v-for="(item, index) in getStatusOptions" :key="index" @click="statusOption = item">
@@ -33,7 +33,7 @@
             <b-col cols="2">
                 <b-dropdown variant="outline-dark" dropright>
                     <template #button-content>
-                        Ciudad
+                        City
                         <font-awesome-icon icon="city" style="font-size: 100%" />
                     </template>
                     <b-dropdown-item v-for="(item, index) in getCitiesOptions" :key="index" @click="cityOption = item">
@@ -69,7 +69,7 @@
                 </b-input-group>
             </b-col>
         </b-row>
-        <b-button variant="primary" class="mt-4" @click="Add()">Añadir</b-button>
+        <b-button variant="primary" class="mt-4" @click="Add()">Add Case</b-button>
     </b-container>
 </div>
 </template>

@@ -3,12 +3,18 @@
         <div>
             <Navbar/>
         </div>
-        <label for="">Id</label>
-        <b-form-input v-model="numberId" type="number" placeholder="Ingrese el id del caso a editar"></b-form-input>
-        {{ numberId }}
-        <label for="">Edad:</label>
-        <b-form-input v-model="text" placeholder="Enter your name"></b-form-input>
-        <b-button @click="editInfo(numberId)">Click me</b-button>
+    <div>
+    <b-container class="containerEdit">
+        <b-row class="abs-center">        
+            <label class="labelId">Id:</label>
+            <b-form-input class="input" v-model="numberId" type="number" placeholder="Enter the number id"></b-form-input>
+            {{ numberId }}
+            <label class="labelAge">Age:</label>
+            <b-form-input v-model="text" placeholder="Enter the new age"></b-form-input>
+            <b-button @click="editInfo(numberId)" class="buttonS">Send</b-button>
+    </b-row>
+    </b-container>
+    </div>
     </div>
 </template>
 
@@ -49,6 +55,29 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+.buttonS{
+    margin-top: 10px;
+    position: relative;
+}
+.containerEdit{
+    margin-top: 40px;
+    width: 250px;
+    height: 250px;
+    background: darkgrey;
+    border-radius: 10px;
+}
 
+.labelAge{
+    margin-top: 20px;
+}
+
+.labelId{
+    margin-top: 20px;
+}
+.abs-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 </style>
